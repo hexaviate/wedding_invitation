@@ -13,8 +13,11 @@ return new class extends Migration {
         Schema::create('mempelai_l_s', function (Blueprint $table) {
             $table->id();
             $table->string('nama');
+            $table->string('nama_panggilan');
             $table->string('nama_bapak');
             $table->string('nama_ibu');
+            $table->string('alamat')->nullable();
+            $table->string('foto');
             $table->foreignId('isi_undangan_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });

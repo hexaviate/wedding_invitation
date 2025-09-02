@@ -14,10 +14,10 @@ return new class extends Migration {
             $table->id();
             $table->dateTime('tanggal_akad');
             $table->dateTime('tanggal_resepsi');
-            $table->string('alamat_akad');
-            $table->string('alamat_resepsi');
-            $table->string('map_alamat_akad');
-            $table->string('map_alamat_resepsi');
+            $table->text('alamat_akad');
+            $table->text('alamat_resepsi');
+            $table->text('map_alamat_akad');
+            $table->text('map_alamat_resepsi');
             $table->foreignId('isi_undangan_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });

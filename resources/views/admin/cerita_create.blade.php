@@ -8,12 +8,14 @@
 </head>
 
 <body>
-    <form action="{{ route('cerita.store') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('galeri.store') }}" method="POST" enctype="multipart/form-data">
         @csrf
-        <input type="file" name="video" placeholder="Masukkan Slug">
-        <input type="text" name="cerita1" placeholder="cerita1">
-        <input type="text" name="cerita2" placeholder="cerita2">
-        <input type="text" name="cerita3" placeholder="cerita3">
+        <input type="file" name="foto1" placeholder="Masukkan foto1">
+        <input type="file" name="foto2" placeholder="Masukkan foto2">
+        <input type="file" name="foto3" placeholder="Masukkan foto3">
+        <input type="file" name="foto4" placeholder="Masukkan foto4">
+        <input type="file" name="foto5" placeholder="Masukkan foto5">
+        <input type="file" name="foto6" placeholder="Masukkan foto6">
         <select name="isi_undangan_id" id="">
             @foreach ($isiUndangan as $item)
                 <option selected disabled>Pilih isiUndangan</option>

@@ -13,6 +13,9 @@ return new class extends Migration {
         Schema::create('undangans', function (Blueprint $table) {
             $table->id();
             $table->string('slug')->unique();
+            $table->string('cover');
+            $table->string('nama_keluarga1');
+            $table->string('nama_keluarga2');
             $table->enum('active', ['yes', 'no']);
             $table->timestamps();
         });
